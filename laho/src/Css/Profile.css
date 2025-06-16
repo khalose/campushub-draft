@@ -1,0 +1,34 @@
+.profile-container {
+  max-width: 480px;
+  margin: 2rem auto;
+}
+
+.profile-tabs {
+  display: flex;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.profile-tabs .tab {
+  flex: 1;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  background: white;
+  border: none;
+  font-size: 1rem;
+  color: #4b5563;
+  transition: color 0.2s, border-bottom-color 0.2s;
+}
+
+.profile-tabs .tab.active {
+  color: #6366f1;
+  border-bottom: 2px solid #6366f1;
+}
+
+.profile-tabs .tab:hover {
+  color: #4f46e5;
+}
+
+.profile-content {
+  padding-top: 1.5rem;
+}

@@ -1,0 +1,160 @@
+:root {
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --gray-600: #4b5563;
+  --gray-300: #d1d5db;
+  --gray-900: #111827;
+  --white: #ffffff;
+}
+
+/* Section background gradient & padding */
+.home-section {
+  padding: 3rem 0;
+  background: linear-gradient(
+    to right,
+    var(--primary-50),
+    var(--primary-100)
+  );
+  height: 60vh;
+}
+.dark .home-section {
+  background: linear-gradient(
+    to right,
+    #1f2937, /* gray-800 */
+    #111827  /* gray-900 */
+  );
+}
+
+/* Container constraints */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 rem;
+}
+
+/* Two-column layout on large screens */
+.grid-two-cols {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+@media (min-width: 1024px) {
+  .grid-two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+/* Text content */
+.text-content {
+  max-width: 540px;
+}
+
+.heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--gray-900);
+  margin: 0;
+}
+.dark .heading {
+  color: var(--white);
+}
+.heading span {
+  display: block;
+}
+.highlight {
+  color: var(--primary-600);
+}
+.dark .highlight {
+  color: #60a5fa; /* primary-400 */
+}
+
+.subheading {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+.dark .subheading {
+  color: var(--gray-300);
+}
+
+/* Call-to-action buttons */
+.cta-group {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.btn.primary {
+  background-color: var(--primary-600);
+  color: var(--white);
+  border: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.btn.primary:hover {
+  background-color: var(--primary-700);
+}
+.btn.outline {
+  background-color: var(--white);
+  color: var(--primary-700);
+  padding: 1rem;
+  font-size: 1.125rem;
+  border: 1px solid var(--primary-700);
+}
+.btn.outline:hover {
+  background-color: #f3f4f6; /* gray-50 */
+}
+.dark .btn.outline {
+  background-color: #374151; /* gray-700 */
+  color: var(--white);
+  border-color: var(--primary-600);
+}
+.dark .btn.outline:hover {
+  background-color: #4b5563; /* gray-600 */
+}
+
+/* Image and overlay */
+.image-wrapper {
+  width: 100%;
+  max-height: 500px; /* or a value appropriate for your layout */
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(17,24,39,0.8), transparent);
+}
