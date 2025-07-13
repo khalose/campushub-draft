@@ -56,6 +56,13 @@ import AnnouncementsPage from './Pages/AnnouncementsPage';
 import Dashboard from './Components/Dashboard';
 import ProfilePage from './Pages/ProfilePage';
 import RSVPDashboard from './Components/RsvpDashboard';
+import Sidebar from './Components/Sidebar';
+import Dashboard from './Pages/Dashboard';
+import Clubs from './Pages/Clubs';
+import Events from './Pages/Events';
+
+
+
 
 function App() {
   return (
@@ -73,6 +80,10 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/dashboard" element={<><Sidebar /><Dashboard /></>} />
+        <Route path="/clubs" element={<><Sidebar /><Clubs /></>} />
+        <Route path="/events" element={<><Sidebar /><Events /></>} />
+
       </Routes>
     </BrowserRouter>
   );
