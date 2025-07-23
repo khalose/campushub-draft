@@ -57,9 +57,13 @@ import Dashboard from './Components/Dashboard';
 import ProfilePage from './Pages/ProfilePage';
 import RSVPDashboard from './Components/RsvpDashboard';
 import Sidebar from './Components/Sidebar';
-import Dashboard from './Pages/Dashboard';
+import DashboardPage from './Pages/Dashboard';
+
+
+
+
 import Clubs from './Pages/Clubs';
-import Events from './Pages/Events';
+import EventsPage from './Pages/Events';
 
 
 
