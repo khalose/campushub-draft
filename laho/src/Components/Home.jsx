@@ -95,7 +95,7 @@ const Home = () => {
                 <span className="highlight">Campus Life</span>
               </h1>
               <p className="subheading">
-                Discover events, join clubs, and stay updated with everything happening on campus.
+                Discover events, join Clubs, and stay updated with everything happening on campus.
                 Your one-stop hub for student engagement and community building.
               </p>
               <div className="cta-group">
