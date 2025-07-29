@@ -45,6 +45,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
+  gap: 1rem;
 }
 
 .logo {
@@ -56,6 +57,7 @@
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -63,6 +65,7 @@
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition);
+  padding: 0.5rem 0;
 }
 
 .dark .nav-links a {
@@ -73,30 +76,26 @@
   color: var(--primary-600);
 }
 
-.auth-buttons {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.profile-link {
+  display: none;
+  /* Hide on larger screens - it's in nav */
 }
 
-.login-btn, .profile-btn {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition: var(--transition);
-  white-space: nowrap;
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .login-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: var(--transition);
   background: transparent;
   border: 1px solid var(--gray-300);
   color: var(--gray-600);
-}
-
-.profile-btn {
-  background: var(--primary-50);
-  border: none;
-  color: var(--primary-600);
+  font-size: 0.9rem;
 }
 
 .dark .login-btn {
@@ -104,8 +103,15 @@
   color: var(--gray-300);
 }
 
-.dark .profile-btn {
-  background: var(--gray-700);
+.login-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--primary-600);
+  color: var(--primary-600);
+}
+
+.dark .login-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary-400);
   color: var(--primary-400);
 }
 
@@ -123,7 +129,6 @@
   justify-content: center;
   transition: var(--transition);
   color: var(--gray-600);
-  margin: 0 0.25rem;
 }
 
 .dark .dark-mode-toggle {
@@ -133,10 +138,41 @@
 .dark-mode-toggle:hover {
   transform: scale(1.1);
   color: var(--primary-600);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .dark .dark-mode-toggle:hover {
   color: var(--primary-400);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .header-right {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .profile-link {
+    display: block;
+  }
 }
 
 /* ===== Hero Section ===== */
