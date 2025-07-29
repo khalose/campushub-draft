@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../Css/Home.css';
 import { FiSun, FiMoon } from 'react-icons/fi';
+import '../Css/Home.css';
 
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -44,30 +44,6 @@ const Home = () => {
 
   return (
     <div className={`home-page ${darkMode ? 'dark' : ''}`}>
-      {/* Header Section */}
-      <header className="main-header">
-        <div className="header-container">
-          <div className="logo">CampusHub</div>
-          <nav className="nav-links">
-            <a href="#home">Home</a>
-            <a href="#events">Events</a>
-            <a href="#clubs">Clubs</a>
-            <a href="#announcements">Announcements</a>
-          </nav>
-          <div className="auth-buttons">
-            <button className="login-btn">Log In</button>
-            <button 
-              className="dark-mode-toggle"
-              onClick={toggleDarkMode}
-              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-            >
-              {darkMode ? <FiSun /> : <FiMoon />}
-            </button>
-            <button className="profile-btn">Profile</button>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section id="home" className="home-section">
         <div className="floating-elements">

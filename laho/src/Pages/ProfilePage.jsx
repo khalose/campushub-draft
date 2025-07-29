@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import LoginPage from './LoginPage';
-import RegisterPage from './RegisterPage';
+import AuthCard from './AuthCard';
 import '../Css/Profile.css';
 
 export default function Profile() {
@@ -23,7 +22,7 @@ export default function Profile() {
         </button>
       </div>
       <div className="profile-content">
-        {mode === 'login' ? <LoginPage /> : <RegisterPage />}
+        <AuthCard initialView={mode} />
       </div>
     </div>
   );
